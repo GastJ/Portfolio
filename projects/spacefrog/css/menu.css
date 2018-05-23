@@ -1,0 +1,66 @@
+@font-face {
+	font-family: "How To Disappear";
+	src: url('font/howtodisappear.ttf');
+
+}
+
+body{
+	font-family: "How To Disappear", Arial, sans-serif;
+	padding: 5px;
+	background-image: url(../assets/space.jpg);
+	background-size: cover; 
+	overflow: hidden;
+	text-align: center;
+	background-color: green;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.btn1{
+	border: 2px solid white;
+	border-radius: 5px;
+	color: white; 
+	text-decoration: none; 
+	padding: 15px 40px;
+	background-color: #000;
+	font-size: 50px;
+	box-shadow: 25px 25px 80px black;
+	margin-top: 150px;
+	/* float: left; */
+}
+.btn1:hover{
+	border: 4px solid #000;
+	color: black;
+	background-color: white;
+	box-shadow: 25px 25px 80px black;
+
+}
+a{
+	margin: 10px;
+}
+img{
+	margin-bottom: 70px;
+}
+
+.titlegame{
+	font-size: 105px;
+	color: white;
+	width: 500px;
+	padding: 20px 0px;
+	margin-left: 30%;
+	text-shadow: 4px 4px #000;
+}
+.retour_page {
+	
+	width: 200px;
+	float: right;
+
+}
+.commandes {
+	width: 60%;
+	margin-left: 200px;
+}
+.credits {
+	width: 60%;
+	margin-left: 200px;
+}

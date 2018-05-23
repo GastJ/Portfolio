@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tchat</title>
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="css/kwick.css">
+</head>
+<body>
+	<nav class="fondgris"><!-- Ouverture nav -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10">
+					<a href="kwick.html"><img src="img/kwick1.png" alt = "Image manquante" class="logonav"></a>
+				</div>	
+				<div class="col-md-2">
+					<button class="btn" id="deconnexion">Se déconnecter</button>
+				</div>
+			</div>	
+		</div>
+	</nav> <!-- Fermeture nav -->
+	<section class="chat"><!-- Ouverture section chat -->
+		<div class="container">
+			<div class="row">	
+			<div class="col-md-3">
+				<button id="clickbtn">Affichez les utilisateurs</button>
+					<ul id="userco">
+						
+					</ul>
+			</div>
+			<div class="col-md-9">
+				<button id="refreshmsg">Refresh message</button>
+				<div id="addmessage">
+					<ul >
+						
+					</ul>
+				</div>		
+				<div class="formchat">
+					<input type="message" name="message" id="message" placeholder="Votre message" size="170"/>
+					<input type="button" name="envoyer" id="envoyer" value="POSTER"/>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="fondgris"> <!-- Ouverture footer -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-1">
+	    		<p><small>© Kwick! - Community - GASTINEAU Julien All Right Reserved|</small></p>
+	   		</div>
+	 		<div class="col-md-3">
+	    		<p><small>CGU.CGV.Mentions légales</small></p>
+	    	</div>
+		</div>
+	</div>
+</footer> <!-- Fermeture footer -->
+
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/kwick.js"></script>
+</body>
+</html>

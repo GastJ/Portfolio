@@ -1,0 +1,56 @@
+/* Feuille de style de index.html */
+
+/* Images */
+
+.imgdefond1{
+	background-image: url("../images/fond1.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.imgdefond2{
+	background-image: url("../images/fond2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+}
+/*.profil{
+	width: 65%;
+}*/
+/* Formulaire */
+input{
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 4px 15px 4px 45px;
+}
+/* Eléments body */
+
+section.imgdefond1 p{
+	color: #fff;
+	font-size: 18px;
+	/*text-shadow: 0.5px 0.5px 0.5px #000;*/
+}
+section.fondblanc h2{
+	color: #068DC9;
+}
+section.fondblanc h3:hover{
+	color: #EA7400;
+	text-decoration: none;
+}
+section.fondblanc a:hover{
+	text-decoration: none;
+}
+span{
+	color: #068DC9;
+}
+section.fondgris{
+	margin-top: 100px;
+}
+section.fondgris h3{
+	text-shadow: 2px 2px 2px #000;
+	color: #fff;
+}
+div.imgdefond2 h2{
+	text-shadow: 2px 2px 2px #000;
+	color: #fff;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Space Frog</title>
+	<script src="phaser.min.js"></script>
+	<script src="scripts/game.js"></script>
+	<script src="scripts/player.js"></script>
+	<script src="scripts/plateform.js"></script>
+	<script>localStorage.clear();</script>
+</head>
+<style>
+	*{overflow: hidden;}
+body{
+			background: #000000;
+			padding:0px;
+			margin:0px;
+		}
+</style>
+	<body>
+	<audio autoplay loop>
+		<source src ="son/deep-space.ogg" type="audio/ogg"/>
+	</audio>
+		<div id="gameContainer"></div>
+	</body>
+</html>

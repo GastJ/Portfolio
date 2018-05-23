@@ -1,0 +1,509 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>PepsApp</title>
+  <!-- Path to Framework7 iOS CSS theme styles-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <!-- Path to Framework7 iOS related color styles -->
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/my-app.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <!-- Status bar overlay for full screen mode (PhoneGap) -->
+  <div class="statusbar-overlay"></div>
+  <!-- Panels overlay-->
+  <div class="panel-overlay"></div>
+  <!-- Left panel with reveal effect-->
+  <div class="panel panel-left panel-reveal">
+    <div class="content-block">
+      <p class="white"><i class="fa fa-cogs fa-2x m10"></i>Paramètres</p>
+      <p><a href="#" class="close-panel white">Fermer</a></p>
+      <p><a href="#" data-panel="right" class="open-panel white">Panel Right Test</a></p>
+    </div>
+  </div>
+  <!-- right panel with cover effect-->
+  <div class="panel panel-right panel-cover bgblue">
+    <div class="content-block">
+      <p class="white"><i class="fa fa-file-text fa-2x m10"></i>Panel Right</p>
+      <p><a href="#" class="close-panel white">Fermer</a></p> 
+      <p><a href="#" data-panel="left" class="open-panel white">Paramètres</a></p>
+    </div>
+  </div>
+  <!-- Views -->
+  <div class="views">
+    <!-- View -->
+    <div class="view view-main">
+      <!-- Pages -->
+      <!-- Top Navbar-->
+      <div class="navbar">
+        <div class="navbar-inner">
+         <div class="left">
+           <a href="#index" class="link">
+            <i class="icon icon-back"></i>
+            <span>Back</span>
+          </a>
+        </div>
+        <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+        <div class="center sliding">Peps App</div>
+        <div class="right">
+                <!-- 
+                  Right link contains only icon - additional "icon-only" class
+                  Additional "open-panel" class tells app to open panel when we click on this link
+                -->
+                <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i><span>Menu</span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+          <div class="pages navbar-through toolbar-through">
+            <div class="pages">
+              <!-- Home page -->
+              <div class="page" data-page="index">
+                <div class="page-content center">
+                 <p class="m20 pt100">Bienvenue sur Peps App, l'application faite pour vous prouver que vous pouvez prendre votre vie en main et en faire ce que vous souhaitez.</p>
+                 <a type="submit" class="button button-big button-fill color-blue m50 mr50 ml50" href="#form">Tentez l'experience</a>
+               </div>
+             </div>
+             <!-- Inscription page -->
+             <div class="page cached" data-page="form">
+              <div class="page-content">
+               <div class="content-block-title">Form</div>
+               <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Name</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Nom et prénom"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Pseudo</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Votre pseudo"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">E-mail</div>
+                        <div class="item-input">
+                          <input type="email" placeholder="E-mail" id="mail"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-password"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Mot de passe</div>
+                        <div class="item-input">
+                          <input type="password" placeholder="Votre mot de passe" id="pass"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Sexe</div>
+                        <div class="item-input">
+                          <select>
+                            <option>Homme</option>
+                            <option>Femme</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Date de naissance</div>
+                        <div class="item-input">
+                          <input type="date" placeholder="Votre date de naissance (J/M/Y)" value="0000-00-00"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block">
+                <div class="row">
+                  <div class="col-50" style="margin:0 auto;">
+                    <a type="submit" class="button button-big button-fill color-green btnsub" href="#index">Inscription</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Services page -->
+          <div class="page cached" data-page="user">
+            <div class="page-content">
+              <div class="content-block-title">Login</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                   <div class="item-content">
+                    <div class="item-media"><i class="icon icon-form-email"></i></div>
+                    <div class="item-inner"> 
+                      <div class="item-title label">E-mail</div>
+                      <div class="item-input">
+                        <input type="email" placeholder="E-mail" id="maillogin"/>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-media"><i class="icon icon-form-password"></i></div>
+                    <div class="item-inner"> 
+                      <div class="item-title label">Mot de passe</div>
+                      <div class="item-input">
+                        <input type="password" placeholder="Votre mot de passe" id="passlogin"/>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content-block">
+              <div class="row">
+                <div class="col-50" style="margin:0 auto;">
+                  <a type="submit" class="button button-big button-fill color-green btnlog" href="#profil" >Connexion</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- page profil -->
+        <div data-page="profil" class="page cached">
+          <div class="page-content">
+            <div class="content-block">
+              <div class="content-block-inner">
+                <div class="content-block-title">Mon profil
+                  <img src="img/user.png" alt="image manquante" width="10%"></div>
+                  <div class="list-block">
+                    <ul>
+                      <li class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">Pseudo</div>
+                        </div>
+                      </li>
+                      <li class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title">Niveau</div>
+                        </div>
+                      </li>
+                      <li class="item-content">
+                        <div class="item-inner">
+                         <div class="item-title">Niveau suivant dans :
+                          <div class="demo-progressbar-inline">
+                            <p><span data-progress="20" class="progressbar"></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content">
+                      <div class="item-inner">
+                      <div class="item-title"><a href="#badges">Mes badges</a></div>
+                      </div>
+                    </li>
+                    <li class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title"><a href="#speech">Mes speechs</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <a type="submit" class="button button-big button-fill color-red btnoff m20 ml50 mr50" href="#user" >Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-page="activites" class="page cached">
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="content-block">
+              <div class="content-block-inner">
+                <div class="content-block-title">Que faites-vous aujourd'hui ?</div>
+                <div class="list-block">
+                  <ul>
+                    <!-- Single radio input -->
+                    <li>
+                      <label class="label-radio item-content">
+                        <!-- Checked by default -->
+                        <input type="radio" name="my-radio" value="Travail" id="travail">
+                        <div class="item-inner">
+                          <div class="item-title">Travail</div>
+                        </div>
+                      </label>
+                    </li>
+                    <!-- Another radio input -->
+                    <li>
+                      <label class="label-radio item-content">
+                        <input type="radio" name="my-radio" value="Repos" id="repos">
+                        <div class="item-inner">
+                          <div class="item-title">Repos</div>
+                        </div>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="label-radio item-content">
+                        <input type="radio" name="my-radio" value="Loisirs"id="loisirs">
+                        <div class="item-inner">
+                          <div class="item-title">Loisirs</div>
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                  <a type="submit" class="button button-big button-fill color-blue btnliste" href="#liste">Ok</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- page badges -->
+    <div data-page="badges" class="page cached">
+      <div class="page-content">
+        <div class="content-block">
+          <h1>Mes badges</h1>
+          <img src="img/applebadge.png" alt="image manquante">
+          <img src="img/cocobadge.png" alt="image manquante">
+          <img src="img/robotbadge.png" alt="image manquante">
+          <p class="m10">Lorem ipsum dolor ...</p>
+          <p class="m10"><a href="#profil" class="close-popup">Retour profil</a></p>
+          <a type="submit" class="button button-big button-fill color-red btnoff m20 ml50 mr50 mt40" href="#index">Déconnexion</a>
+        </div>
+      </div>
+    </div>
+        <!-- page speech -->
+        <div data-page="speech" class="page cached">
+          <div class="page-content contacts-content">
+            <div class="list-block contacts-block">
+              <div class="list-group">
+                <h2 class="black"><i class="fa fa-file-text fa-2x m10"></i>Speechs</h2>
+                <ul>
+                  <li class="list-group-title">Comment se sortir des émotions negatives ?</li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title"><a href="#" data-popup=".popup-speech1" class="open-popup">Speech 1</a></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-group">
+                <ul>
+                  <li class="list-group-title">La victoire au mental</li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title"><a href="#" data-popup=".popup-speech2" class="open-popup">Speech 2</a></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-group">
+                <ul>
+                  <li class="list-group-title">Speech 3</li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title"><a href="#" data-popup=".popup-speech3" class="open-popup">Speech 3</a></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Speech1 Popup -->
+          <div class="popup popup-speech1">
+            <div class="content-block">
+              <p>Lorem ipsum</p>
+              <p><a href="#" class="close-popup">Close popup</a></p>
+              <p>Lorem ipsum dolor sit amet ...</p>
+            </div>
+          </div>
+          <!-- Speech2 Popup -->
+          <div class="popup popup-speech2">
+            <div class="content-block">
+              <p>Quand a été la dernière fois où vous ne vous êtes pas senti capable de faire quelque chose ?
+                Le principal frein pour aller au bout de vos projets c’est vous ! Se convaincre soi même est souvent plus difficile que de convaincre les autres. La seule pensée à avoir est « je suis capable de… ».
+                N’hésitez pas à écouter des musiques motivantes et à regarder des vidéos de coaching qui sont un moyen simple mais efficace pour se motiver immédiatement.</p>
+              <p><a href="#" class="close-popup">Close popup</a></p>
+              <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          <!-- Speech3 Popup -->
+          <div class="popup popup-speech3">
+            <div class="content-block">
+              <p>Speech 3</p>
+              <p><a href="#" class="close-popup">Close popup</a></p>
+              <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+        </div>
+        <!--page liste -->
+        <div data-page="liste" class="page cached">
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="content-block">
+              <div class="content-block-inner">
+                <div class="content-block-title">Pourquoi pas ceci ?</div>
+                <div class="list-block listapp div_list">
+                  <a type="submit" class="button button-big button-fill color-blue btncheckbox" href="#checkbox"  >Compte Rendu</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Resultat -->
+        <div data-page="Resultat" class="page cached">
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="content-block">
+              <div class="content-block-inner">
+                <div class="list-block">
+                 <p>Vous avez effectué 1 activités sur 3.<br/>
+                  C'est un début mais vous pouvez faire encore mieux !<br/>
+                  Et si demain vous en faisiez deux ?<br/>
+                  Ne considérez pas cela comme un echec dites vous que ce n'est que la 1 ère marche de votre ascension vers la vie que vous souhaitez.<br/>
+                  <br/>
+                  +10 xp<br/>
+                  <br/>
+                  Niveau :<br/>
+                  <br/>
+                  XP avant prochain niveau : </p>
+                  <a type="submit" class="button button-big button-fill color-blue" href="#user">Voir profil</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resultat2 -->
+        <div data-page="Resultat2" class="page cached">
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="content-block">
+              <div class="content-block-inner">
+                <div class="list-block">
+                 <p>Vous avez effectué 2 activités sur 3.<br/>
+                  Bravo ! Pas mal du tout !<br/>
+                  Ne vous sentez-vous pas mieux désormais ?<br/>
+                  Si c'est le cas, continuez sur votre lancée et essayez de faire encore mieux la prochaine fois, les résultats seront au rendez-vous !<br/>
+                  <br/>
+                  +20 xp<br/>
+                  <br/>
+                  Niveau :<br/>
+                  <br/>
+                  XP avant prochain niveau : </p>
+                  <a type="submit" class="button button-big button-fill color-blue" href="#user">Voir profil</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resultat3 -->
+        <div data-page="Resultat3" class="page cached">
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="content-block">
+              <div class="content-block-inner">
+                <div class="list-block">
+                 <p>Vous avez effectué 3 activités sur 3.<br/>
+                  Excellent vous avez compris l'idée !<br/>
+                  Quel sentiment cela fait d'atteindre l'objectif que l'on s'est fixé ?<br/>
+                  Focalisez vous là-dessus et essayez de faire aussi bien demain. Avec cette envie vous êtes capable de réussir tout ce que vous entreprenez. Croyez en vous jusqu'au bout !<br/>
+                  <br/>
+                  +30 xp<br/>
+                  <br/>
+                  Niveau :<br/>
+                  <br/>
+                  XP avant prochain niveau : </p>
+                  <a type="submit" class="button button-big button-fill color-blue" href="#user">Voir profil</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-page="checkbox" class="page cached">
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="content-block">
+              <div class="content-block-inner">
+                <div class="content-block-title">Alors qu'avez vous fait aujourd'hui ?</div>
+                <div class="list-block listapp2 div_check_box">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Toolbar-->
+    <div class="toolbar">
+      <div class="toolbar-inner">
+        <!-- Toolbar links -->
+        <a href="#index" class="link"><i class="fa fa-home fa-2x blue"></i></a>
+        <a href="#activites" class="link"><i class="fa fa-check fa-2x blue"></i></a> 
+        <a href="#user" class="link"><i class="fa fa-user fa-2x blue"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/my-app.js"></script>
+<script >
+      // Initialize App  
+      var myApp = new Framework7();                
+    // Load about page:
+    mainView.router.load({pageName: 'about'});
+    var mainView = myApp.addView('.view-main', {
+    domCache: true //enable inline pages
+  });
+</script>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAZxsGZAOUyMJnAvRzggSrMGiBcpgV5poQ",
+      authDomain: "peps-app.firebaseapp.com",
+      databaseURL: "https://peps-app.firebaseio.com",
+      storageBucket: "peps-app.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+</body>
+</html>

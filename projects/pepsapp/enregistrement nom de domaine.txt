@@ -1,0 +1,2 @@
+globalsign-domain-verification=1iNNGLlJ6qSchnP2Ivr5P06LlcXvzzNZHMx8aZch_n
+firebase=peps-app

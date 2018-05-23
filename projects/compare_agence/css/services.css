@@ -1,0 +1,40 @@
+/* Feuille de style de services.html */
+
+/* Images */
+
+ .imgdefond1{
+	background-image: url("../images/fond1.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-bottom: 30px;
+	padding-top: 20px;
+}
+/* Formulaire */
+
+input{
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 4px 15px 4px 45px;
+}
+
+/* Eléments body */
+section.imgdefond1 h1{
+	margin-left: 40px;
+}
+section.fondblanc p{
+	margin: 20px 0px 10px -60px;
+	font-weight: bold;
+}
+section.fondblanc .fa{
+	color: #068DC9;
+}
+section.fondblanc .fa-plus{
+	margin: 10px 0px 0px -100px;
+}
+section.fondbleu .fa-user{
+	margin: 40px 0px 0px 40px;
+}
+section.fondbleu .fa-quote-left{
+	margin: 80px 0px 0px 90px;
+}

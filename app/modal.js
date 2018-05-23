@@ -9,7 +9,7 @@ $(".body").on("mousemove",function(e) {
 // Scroll to section on click
 
 $("#accueil, #accueil-res").on('click', function(event){
-    if ($(window).width() < 769) {
+    if ($(window).width() < 767) {
         $('html, body').animate({
             scrollTop: $("html").offset().top
         }, 500);
@@ -38,7 +38,7 @@ $("#portfolio, #portfolio-res").on('click', function(event){
         scrollTop: $(".work").offset().top+1
         }, 500);
     };*/
-    if ($(window).width() < 769) {
+    if ($(window).width() < 767) {
         $('html, body').animate({
             scrollTop: $(".work").offset().top
         }, 500);
@@ -46,9 +46,16 @@ $("#portfolio, #portfolio-res").on('click', function(event){
         $(".menu-section").toggle();
     }
     else {
-        $('html, body').animate({
-            scrollTop: $(".work").offset().top-73
-        }, 500);
+        if ($(window).width() > 767 && $(window).width() < 1025) {
+            $('html, body').animate({
+                scrollTop: $(".work").offset().top-64
+            }, 500);
+        }
+        else{
+            $('html, body').animate({
+                scrollTop: $(".work").offset().top-73
+            }, 500);
+        }
     }
     return false;
 });
@@ -62,7 +69,7 @@ $("#skills, #skills-res").on('click', function(event){
         scrollTop: $(".skills").offset().top*1.7
         }, 500);
     };*/
-    if ($(window).width() < 769) {
+    if ($(window).width() < 767) {
         $('html, body').animate({
             scrollTop: $(".skills").offset().top
         }, 500);
@@ -70,9 +77,16 @@ $("#skills, #skills-res").on('click', function(event){
         $(".menu-section").toggle();
     }
     else {
-        $('html, body').animate({
-            scrollTop: $(".skills").offset().top-73
-        }, 500);
+        if ($(window).width() > 767 && $(window).width() < 1025) {
+            $('html, body').animate({
+                scrollTop: $(".skills").offset().top-62
+            }, 500);
+        }
+        else{
+            $('html, body').animate({
+                scrollTop: $(".skills").offset().top-73
+            }, 500);
+        }
     }
     return false;
 });
@@ -86,7 +100,7 @@ $("#contact, #contact-res").on('click', function(event){
         scrollTop: $("html").offset().top
     }, 500);
     };*/
-    if ($(window).width() < 769) {
+    if ($(window).width() < 767) {
         $('html, body').animate({
             scrollTop: $(".contact").offset().top
         }, 500);
@@ -94,9 +108,16 @@ $("#contact, #contact-res").on('click', function(event){
         $(".menu-section").toggle();
     }
     else {
-        $('html, body').animate({
-            scrollTop: $(".contact").offset().top-73
-        }, 500);
+        if ($(window).width() > 767 && $(window).width() < 1025) {
+            $('html, body').animate({
+                scrollTop: $(".contact").offset().top-64
+            }, 500);
+        }
+        else{
+            $('html, body').animate({
+                scrollTop: $(".contact").offset().top-73
+            }, 500);
+        }
     }
     return false;
 });

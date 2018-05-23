@@ -236,11 +236,7 @@ if (window.matchMedia("(min-width: 600px)").matches) { // for responsive
         canvasDots();
     };
 }
-// ===================
-// ===================  
-// Tooltip display:
-// ===================
-// ===================
+// Tooltip display
 var tooltiptext;
 $(".tooltip").mouseenter(function(){
   // Get elements:
@@ -256,12 +252,7 @@ $(".tooltip").mouseenter(function(){
   thisTooltip.css({"background":dataColor, "color":dataColor});
 });
 
-
-// ===================
-// ===================
-// Stat Trigger:
-// ===================
-// ===================
+// Stat Trigger
 //Get Stroke Path length:
 var path = document.querySelector('.stat-path');
 var dashLength = path.getTotalLength();

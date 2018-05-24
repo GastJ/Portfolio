@@ -71,7 +71,7 @@ $("#skills, #skills-res").on('click', function(event){
     };*/
     if ($(window).width() < 767) {
         $('html, body').animate({
-            scrollTop: $(".skills").offset().top
+            scrollTop: $(".skills").offset().top+1
         }, 500);
         $('#nav-icon').toggleClass('open');
         $(".menu-section").toggle();
@@ -291,6 +291,17 @@ function triggerStats(){
 $(document).ready(function(){
     $('#nav-icon').click(function(){
         $(this).toggleClass('open');
+        $('div#nav-icon span').toggleClass('menuOpenChange');
         $(".menu-section").toggle();
     });
+});
+var section = $(".skills");
+var sectionOffSet = section.offset().top;
+var sectionHeight = section.height();
+var $w = $(window).scroll(function(){
+  if ($w.scrollTop() >= sectionOffSet && $w.scrollTop() <= (sectionOffSet + sectionHeight)) {
+    $('div#nav-icon span').addClass('menuChange');
+  }else{
+    $('div#nav-icon span').removeClass('menuChange');
+  }
 });

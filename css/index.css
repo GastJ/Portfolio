@@ -206,7 +206,7 @@ span{
 	color :#59f5a4;
 }
 .icons-menu{
-	margin-top: 15vh;
+	margin-top: 10vh;
 	font-size: 24px;
 }
 /* PORTFOLIO SECTION */
@@ -662,6 +662,15 @@ p{
 	.bgebolarena, .bgspacefrog, .bgph, .bgca, .bgkwick, .bgpepsapp{
 		margin-bottom: -3.3% !important;
 	}
+	.li-menu-section{
+		margin-top: 3em !important;
+	}
+	.tooltipText{
+		display: none !important;
+	}
+	.tooltipLi:hover + .tooltipText {
+	    display: none !important;
+	}
 }
 /* GALAXY S5 */
 @media (min-width: 350px) and (max-width: 370px) and (min-height: 620px) and (max-height: 660px){
@@ -829,7 +838,6 @@ p{
 	position: absolute;
 	height: 5px;
 	width: 100%;
-	background: #fff;
 	border-radius: 9px;
 	opacity: 1;
 	left: 0.5rem;
@@ -841,6 +849,12 @@ p{
 	-moz-transition: .25s ease-in-out;
 	-o-transition: .25s ease-in-out;
 	transition: .25s ease-in-out;
+	background-color: #fff;
+}
+.menuChange{
+	background-color: #000 !important;
+}
+.menuOpenChange{
 	background-color: #fff !important;
 }
 #nav-icon span:nth-child(1) {
@@ -909,6 +923,8 @@ p{
    /*  top: 0; */
     left: 0;
 }
-.tooltipLi:hover + .tooltipText {
-    display: inline-block !important;
+@media (min-width: 768px) {
+	.tooltipLi:hover + .tooltipText {
+	    display: inline-block !important;
+	}
 }

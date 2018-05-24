@@ -295,13 +295,26 @@ $(document).ready(function(){
         $(".menu-section").toggle();
     });
 });
-var section = $(".skills");
-var sectionOffSet = section.offset().top;
-var sectionHeight = section.height();
-var $w = $(window).scroll(function(){
-  if ($w.scrollTop() >= sectionOffSet && $w.scrollTop() <= (sectionOffSet + sectionHeight)) {
-    $('div#nav-icon span').addClass('menuChange');
-  }else{
-    $('div#nav-icon span').removeClass('menuChange');
-  }
-});
+if($(window).width() < 400){
+    var section = $(".skills");
+    var sectionOffSet = section.offset().top +300;
+    var sectionHeight = section.height();
+    var $w = $(window).scroll(function(){
+      if ($w.scrollTop() >= sectionOffSet && $w.scrollTop() <= (sectionOffSet + sectionHeight + 1000)) {
+        $('div#nav-icon span').addClass('menuChange');
+      }else{
+        $('div#nav-icon span').removeClass('menuChange');
+      }
+    });
+}else{
+    var section = $(".skills");
+    var sectionOffSet = section.offset().top;
+    var sectionHeight = section.height();
+    var $w = $(window).scroll(function(){
+      if ($w.scrollTop() >= sectionOffSet && $w.scrollTop() <= (sectionOffSet + sectionHeight + 2000)) {
+        $('div#nav-icon span').addClass('menuChange');
+      }else{
+        $('div#nav-icon span').removeClass('menuChange');
+      }
+    });
+}
